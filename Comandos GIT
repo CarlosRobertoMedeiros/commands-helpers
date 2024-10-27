@@ -1,0 +1,153 @@
+
+
+COMANDOS GIT
+
+DESCRICOES DIVERSAS
+	NIVEIS DE CONFIGURACAO DO USUARIO GIT (Ordem hierarquica Local, Global, System)
+		- SISTEMA(--system)									= Afeta todos os usuários e repositorios da maquina(/etc/gitconfig)
+		- GLOBAL(--global)									= Afeta todos os repositórios para o usuario atual(.gitconfig) de cada usuario
+		- LOCAL (--local)									= Afeta somente o repo git onde a configuracao e feita(.git/config)
+	
+	
+	ETAPAS = Workspace "Codigo onde Trabalhamos" (git add) / 
+			 Staging Area ou Index (git commit )/ 
+			 Local Repository / (git push origin <branch>) 
+			 Remote Repository
+			 
+	
+	
+
+CONFIGURACOES DIVERSAS
+	git config --list										= Lista todas as configurações disponíveis no seu git, mostrando as cofigs(Local, Global e System)
+	git config --system --edit								= Edita valores do arquivo de configuracao do sistema
+
+	git config --global --edit								= Edita valores do arquivo .gitconfig de configuracao do usuario
+	git config --global core.editor code					= edita o arquivo .gitconfig do usuario informando que o editor sera o vscode
+	git config --local --edit								= edita o arquivo .gitconfig do projeto local, normalmente pouco usado
+	
+	Criação de alias no arquio .gitconfig do usuario		= Exemplo [alias] logf = !git log --oneline --decorate --all --graph
+	Criação de alias no arquio .gitconfig do usuario		= Exemplo [alias] commit = !git add --all & git commit -m
+	Exemplo de alias para log								= l = !git log --pretty=format:'%C(yellow)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+	
+	
+
+
+COMANDOS GERAIS 
+	git version												= Verifica se o Git está instalado
+	git config --global user.name <Nome>					= Configura para todos os repositórios criados localmente os dados do nome do usuário
+	git config --global user.email <Email>					= Configura para todos os repositórios criados localmente os dados do email do usuário
+
+	git config user.name <Nome>								= Configura para o repositório específico localmente os dados do nome do usuário
+	git config user.email <Email>							= Configura para o repositório específico localmente os dados do email do usuário
+
+
+COMANDO LOCAIS
+	git init    											= Cria um repositório local vazio em um diretório no seu computador
+	
+	git add     									    	= Adiciona o arquivo na stage área do repositório local
+	git add <filename>    							    	= Adiciona o arquivo com filename <filename> na stage área do repositório local
+	git add .										    	= Adiciona todos os arquivo na stage área do repositório local
+	    									
+	git status    									        = Mostra o status entre o repositório local e remoto
+	git status -s  									        = Mostra o status entre o repositório local e remoto de maneira resumida
+	git commit -m "chore: add Oyster build script"	        = Salva as alterações no repositório local
+	git commit -m "docs: explain hat wobble"		        = Salva as alterações no repositório local
+	git commit -m "feat: add beta sequence"			        = Salva as alterações no repositório local
+	git commit -m "fix: remove broken message"	            = Salva as alterações no repositório local
+	git commit -m "refactor: share logic between XX"        = Salva as alterações no repositório local
+	git commit -m "style: convert tabs to spaces"	        = Salva as alterações no repositório local
+	git commit -m "test: ensure Lay retains clothing"	    = Salva as alterações no repositório local
+	git commit -ammend "test: ensure Lay retains clothing"	= Substitui localmente o ultimo commit, permitindo a edição da mensagem em caso de erro
+
+
+	git log     											= Mostra o Log Comparando o repositório local com o repositório remoto
+	git log --oneline --decorate --all--graph       		= Mostra o Log Comparando o repositório local com o repositório remoto em visão de árvore
+	
+	git branch  											= Visualizar todas as branches
+	git branch -d <nome> 									= Exclui uma branch local
+
+	git checkout <branch_name>								= Navega entre as Branches
+	git checkout -b <branch_name>							= Cria uma nova branch (feature/release/fix) a partir da Branch que está
+	git checkout -b <branch_name> origin/<branch_name>		= Cria uma nova branch (<branch_name>) a partir da branch no repo remoto
+
+    Tags Anotadas(Tem descrição) e Tags Leves(Apenas marcam)
+	
+	git tag -a v1.0.0 -m "feat: Func Implementadas"         = Gera a Tag, lembrando que o rotuno tem que ser a partir de uma branch
+	git tag 										        = Mostra todas as tags
+	git show v1.0.0											= Mostra detalhes da tag
+	git tag -a "0.1.beta" -m "release 0.1.beta" <idCommit>  = Cria o rótulo para a verssão 0.1 realizada no commit <idCommit>
+	git push origin v1.0.0 									= Envia a tag local para o repositorio remoto
+	git tag -d "v1.0.0"										= Remove a Tag Localmente
+	git push --delete origin tag -d "v1.0.0"				= Remove a Tag Remotamente
+	
+	
+
+    git diff origin <repo_remoto> 							= Demonstra a diferença entre o repositório local e o repositório remoto
+	git merge origin <repo_feature_implementada>			= Mescla para o repositorio que está os códigos do repositório de feature implementada
+
+	git reset --soft 										= não remove arquivo da staging área
+	git reset --mixed 										= remove arquivo da staging área
+	git reset --hard 										= limpa todo o working directory
+	git reflog ?
+
+
+	Stash(Esconderijo)										= Área de armazenamento de código local fora do git flow, para momentaneamente resolver outros problemas
+	git stash clear											= Limpar o stash 
+	git stash save   										= Criar uma entrada no stash de arquivos
+	git stash apply* Olhar o pop							= Trazer de volta os arquivos
+	git stash apply stash@{1}								= Trazer de volta os arquivos da referência daquele stash
+	git stash list   										= Lista os arquivos no Stash 
+	git stash drop   										= Exclui o stash
+	git stash pop    										= Aplicar o stash e remover o valor que estava no stash(esconderijo)
+	git stash branch 										= Criar uma branch a partir do stash
+
+
+COMANDO REMOTOS
+	git remote add origin <url>     						= Adiciona url do repositorio Remoto no diretorio local
+	git remote -v 											= Lista a Url do repositorio Remoto
+	git clone <repo> 										= Clona o repositório remoto
+
+	git fetch 												= Atualizar sua copia do repo com as mudanças do repo remoto, sem mesclar as alterações com sua branch local
+	git fetch --all											= Atualizar toda sua copia com todas as branches do repo com as mudanças do repo remoto, sem mesclar as alterações com sua branch local
+	git pull origin <remote_branch>							= Como git fetch, porém mescla as alterações com sua branch local
+	git pull --rebase origin <remote_branch>				= Como git fetch, porém mescla as alterações do repo remoto primeiro depois as minhas em caso de conflito
+	
+	
+	git push origin --delete <remote branch name>			= Exclui uma branch remota no repositorio
+
+	git push origin <remote_branch>                     	= Enviar as alterações a partir do seu repositório local para o repositorio remoto
+
+    git merge <branch_com_a_mudanca>                    	= A partir da branch local, realiza uma mesclagem enviando os dados da branch com mudança para a que não tem
+
+
+
+/*---------------------------
+   Utilizando o GIT FLOW
+---------------------------*/
+
+Cria a feature branch a partir da developer
+	git checkout -b feat/<nomeDaFeature>
+
+Realiza o merge da feat/<nomeDaFeature> na developer (Olhar depois casos de PR)
+	git checkout developer
+	git merge feat/<nomeDaFeature>
+
+Cria a release a partir da developer
+	git checkout developer
+	git checkout -b release/1.0.0
+	git push origin release/1.0.0
+
+Cria a Tag
+	git tag -a v1.0.0 -m "feat: Func Implementadas"
+	git push origin v1.0.0 
+
+Release o Merge da Tag na Main
+	git checkout main
+	git merge release/1.0.0
+	
+	
+Não esquecer do arquivo de ChangeLog
+
+
+Continuar daqui
+https://www.youtube.com/watch?v=dzSaKiRVRM4&list=PL9aKtVrF05DzbNiE7jcm7s6z6Lg-u72Rq&index=4
