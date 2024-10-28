@@ -69,6 +69,25 @@ COMANDO LOCAIS
 	git checkout <branch_name>								= Navega entre as Branches
 	git checkout -b <branch_name>							= Cria uma nova branch (feature/release/fix) a partir da Branch que está
 	git checkout -b <branch_name> origin/<branch_name>		= Cria uma nova branch (<branch_name>) a partir da branch no repo remoto
+	git checkout <fileName> .								= Em um arquivo trackeado, na workspace ele desfaz a mudança
+	Cria Branch Temporária para apenas investigar o commit
+	Caso queira resolver o problema a partir da branch
+	Preciso Criar uma Branch Nova a partir da desconectada
+	git checkout <idCommit>									= Investiga o código em uma branch DESCONECTADA para aquele commit a partir do Hash
+	git checkout <tagName>									= Investiga o código em uma branch DESCONECTADA para aquele commit a partir da Tag
+	
+	git clean -n											= Lista os arquivos na Workspace que vão ser removidos
+	git clean 												= Remove Arquivos na Workspace não traqueados porém da erro devido a segurança do git
+	git clean -f											= Remove os arquivos na Workspace que vão ser removidos
+	git clean -nd											= Lista os arquivos na Workspace que estão dentro de diretórios para remoção
+	git clean -d											= Remove os arquivos na Workspace que estão dentro de diretórios recursivamente
+	
+	git rm													= Apaga arquivos já trackeados pelo git localmente e ao realizar o push exclui no repo remoto, criando uma nova linha no flow
+	git rm <diretorio> -f 									= Apaga o diretorio com todos os arquivos já trackeados pelo git localmente e ao realizar o push exclui no repo remoto, criando uma nova linha no flow
+	git rm <file> --cached									= O arquivo vai passar a não ser mais traqueado(o <file> foi incluido no .gitIgnore)
+	
+	
+	
 
     Tags Anotadas(Tem descrição) e Tags Leves(Apenas marcam)
 	
@@ -128,6 +147,12 @@ COMANDO LOCAIS
 	git stash drop   										= Exclui o stash
 	git stash pop    										= Aplicar o stash e remover o valor que estava no stash(esconderijo)
 	git stash branch 										= Criar uma branch a partir do stash
+	
+	
+	Trabalhando com Rebase Iterativo
+	git rebase
+	
+	
 
 
 COMANDO REMOTOS
@@ -149,9 +174,11 @@ COMANDO REMOTOS
 
 
 
+
 /*---------------------------
    Utilizando o GIT FLOW
 ---------------------------*/
+
 
 Cria a feature branch a partir da developer
 	git checkout -b feat/<nomeDaFeature>
@@ -178,4 +205,4 @@ Não esquecer do arquivo de ChangeLog
 
 
 Continuar daqui
-https://www.youtube.com/watch?v=vBZrpqYpvFs&list=PL9aKtVrF05DzbNiE7jcm7s6z6Lg-u72Rq&index=5
+https://www.youtube.com/watch?v=0MVXlGQe9nU&list=PL9aKtVrF05DzbNiE7jcm7s6z6Lg-u72Rq&index=6
