@@ -85,9 +85,37 @@ COMANDO LOCAIS
     git diff origin <repo_remoto> 							= Demonstra a diferença entre o repositório local e o repositório remoto
 	git merge origin <repo_feature_implementada>			= Mescla para o repositorio que está os códigos do repositório de feature implementada
 
-	git reset --soft 										= não remove arquivo da staging área
-	git reset --mixed 										= remove arquivo da staging área
-	git reset --hard 										= limpa todo o working directory
+	O git reset é  é usado para desfazer mudanças em um repositório Git, 
+	permitindo restaurar um estado anterior. Ele pode ser utilizado para "voltar no tempo" 
+	na linha do tempo do Git, mudando o histórico de commits, 
+	o estado do staging area (área de preparação) ou até do diretório de trabalho.
+	Ele não	cria commits novos, apenas retorna ao commit que você alterou
+	
+	
+	git reset --soft 										= Mantém o histórico dos arquivos no staging e no workspace
+	git reset --mixed 										= Remove os arquivos do staging area, mas mantém as alterações no worskpace
+	git reset --hard 										= Apaga as alterações do staging e do workspace
+	
+	git reset HEAD~1 --soft  <HEAD~1 um commit anterior>	= Remove o Commit e volta os arquivos para a staging
+	git reset HEAD~1 --mixed <HEAD~1 um commit anterior>	= Remove o Commit e volta os arquivos para a worskpace
+	git reset HEAD~1 --hard  <HEAD~1 um commit anterior>	= Desfaz completamente o commit e suas mudanças
+ 	git reset <idCommit> --soft
+	git reset <idCommit> --mixed(default)
+	git reset <idCommit> --hard
+	
+	
+	o git revert é usado para desfazer um commit no Git, mas diferentemente do git reset, ele cria um novo commit 
+	que "inverte" ou "reverte" as mudanças feitas pelo commit que você especifica, mantendo o histórico e sem 
+	alterar o histórico do repositório. Isso o torna útil para reverter alterações de forma segura, especialmente 
+	em ambientes compartilhados.
+	Obs: Os arquivos com conflito ficam com UU no seu status
+	git revert <commitId>
+	git revert HEAD~1
+	git revert HEAD~1 --no-edit								= Desfez criando um novo commit, aproveitando a mensagem anterior com revert no inicio 
+	git revert HEAD~1 --no-commit							= Desfez e coloca na staging area para eu digitar a mensagem do novo commit, fazendo com que eu mantenha o padrão de nomes
+	
+	
+	
 	git reflog ?
 
 
@@ -150,4 +178,4 @@ Não esquecer do arquivo de ChangeLog
 
 
 Continuar daqui
-https://www.youtube.com/watch?v=dzSaKiRVRM4&list=PL9aKtVrF05DzbNiE7jcm7s6z6Lg-u72Rq&index=4
+https://www.youtube.com/watch?v=vBZrpqYpvFs&list=PL9aKtVrF05DzbNiE7jcm7s6z6Lg-u72Rq&index=5
