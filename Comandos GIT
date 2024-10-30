@@ -99,7 +99,7 @@ COMANDO LOCAIS
 	git revert HEAD~1 --no-edit								= Desfez criando um novo commit, aproveitando a mensagem anterior com revert no inicio 
 	git revert HEAD~1 --no-commit							= Desfez e coloca na staging area para eu digitar a mensagem do novo commit, fazendo com que eu mantenha o padrão de nomes
 	
-	git cherry-pick <commit-hash>							= "Copiar" um commit específico de um branch e aplicá-lo em outro, sem precisar fazer um merge completo
+	git cherry-pick <commit-hash>							= "Copiar" um commit específico de um branch e aplica ele em outro, sem precisar fazer um merge completo
 		
 	git reflog												= Mostra todas as alterações no projeto
 
