@@ -253,6 +253,7 @@ sudo reboot
 
 #09_ Instalando o controlador VBoxGuestAdditions.iso para permitir a tela em full screen 
 ```bash
+#OBSERVAÇÃO IMPORTANTE: Siga a ordem de execução abaixo
 1. Vá em armazenamento na imagem do virtual box que pretende usar  
 2. Em dispositivos adicione uma Controladora: SATA 
 3. Ao clicar no (+) inclua VBoxGuestAdditions.iso e Ok 
