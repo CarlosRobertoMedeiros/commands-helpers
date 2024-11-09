@@ -20,8 +20,6 @@ O QUE É E PARA QUE SERVER O VSCODE: O Visual Studio Code é um editor de códig
 Terminal: Ctrl + Alt + T
 
 #verificando as versões e codinome do sistema operacional
-#OBSERVAÇÃO IMPORTANTE: Linux Mint 20.x é derivado do Ubuntu Desktop 20.04.x Focal Fossa
-#OBSERVAÇÃO IMPORTANTE: Linux Mint 21.x é derivado do Ubuntu Desktop 22.04.x Jammy Jellyfish
 #OBSERVAÇÃO IMPORTANTE: Linux Mint 22.x é derivado do Ubuntu Desktop 24.04.x Noble Numbat
 sudo cat /etc/os-release
 sudo cat /etc/lsb-release
@@ -51,16 +49,7 @@ sudo apt autoclean
 sudo apt clean
 ```
 
-#02_ Instalando as Dependências do Microsoft Visual Studio Code VSCode no Linux Mint<br>
-```bash
-#instalando as dependências do VSCode no Linux Mint 20.x e 21.x
-sudo apt install vim git python2 python3 pip cloc
-
-#instalando as dependências do VSCode no Linux Mint 22.x
-sudo apt install vim git python3 python3-pip cloc
-```
-
-#03_ Baixando o Microsoft Visual Studio Code VSCode para o Linux Mint<br>
+#02_ Baixando o Microsoft Visual Studio Code VSCode para o Linux Mint<br>
 ```bash
 #link de download oficial do VSCode
 Link de download: https://code.visualstudio.com/download
@@ -68,7 +57,7 @@ Link de download: https://code.visualstudio.com/download
     Salvar aquivo
 ```
 
-#04_ Instalando o Microsoft Visual Studio Code VSCode utilizando o Gdebi-Gtk no Linux Mint<br>
+#03_ Instalando o Microsoft Visual Studio Code VSCode utilizando o Gdebi-Gtk no Linux Mint<br>
 ```bash
 #instalação em modo gráfico (indicado)
 Arquivos
@@ -78,7 +67,7 @@ Arquivos
     <Fechar>
 ```
 
-#05_ Verificando o novo repositório do Microsoft Visual Studio Code VSCode no MintUpdate<br>
+#04_ Verificando o novo repositório do Microsoft Visual Studio Code VSCode no MintUpdate<br>
 ```bash
 #verificando o novo repositório no Linux Mint
 Menu
@@ -94,7 +83,7 @@ Menu
   <Fechar>
 ```
 
-#06_ Iniciando o Microsoft Visual Studio Code VSCode no Linux Mint<br>
+#05_ Iniciando o Microsoft Visual Studio Code VSCode no Linux Mint<br>
 ```bash
 #iniciando o VSCode no Linux Mint
 Menu
@@ -105,7 +94,7 @@ Menu
       Disable: Mostrar página inicial na inicialização
 ```
 
-#07_ Configurando o Microsoft Visual Studio Code VSCode como Aplicativo de Preferência no Linux Mint<br>
+#06_ Configurando o Microsoft Visual Studio Code VSCode como Aplicativo de Preferência no Linux Mint<br>
 ```bash
 #configuração básica do VSCode no Linux Mint
 Menu
