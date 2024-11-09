@@ -1,7 +1,7 @@
 #Autor: Carlos Roberto<br>
 #Referencia: Bora para Prática: http://boraparapratica.com.br<br>
-#Data de criação: 06/11/2024<br>
-#Data de atualização: 06/11/2024<br>
+#Data de criação: 07/11/2024<br>
+#Data de atualização: 07/11/2024<br>
 #Versão: 1.0<br>
 #Testado e homologado no Linux Mint 22 Wilma x64<br>
 
