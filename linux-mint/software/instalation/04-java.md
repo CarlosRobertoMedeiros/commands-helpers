@@ -145,10 +145,11 @@ sdk install java 17.0.8-tem maven 3.8.4
 ```
 
 #04_Como instalar a IDE Intelij atualizada <br>
+ 
+  ```bash
   1- Baixe o IntelliJ IDEA Comunity Edition em https://www.jetbrains.com/idea/download/.
   2- Extraia o arquivo baixado, substituia ideaIC-2023.2.2.tar.gz ou o nome-do-seu-arquivo.tar.gz pelo nome do arquivo real que você baixou:
-
-  ```bash
+  
   #Extraindo o arquivo
   tar -xzf ideaIC-2023.2.2.tar.gz
   ```
@@ -171,18 +172,18 @@ sdk install java 17.0.8-tem maven 3.8.4
   sudo nano /usr/share/applications/intellij-idea.desktop
 
   #Colocar o texto abaixo no documento criado
-[Desktop Entry]
-Name=IntelliJ IDEA
-Comment=Edição Comunitária do IntelliJ IDEA
-Exec=/opt/intellij-idea/bin/idea.sh
-Icon=/opt/intellij-idea/bin/idea.png
-Terminal=false
-Type=Application
-Categories=Desenvolvimento;IDE;
-StartupWMClass=jetbrains-idea
+  [Desktop Entry]
+  Name=IntelliJ IDEA
+  Comment=Edição Comunitária do IntelliJ IDEA
+  Exec=/opt/intellij-idea/bin/idea.sh
+  Icon=/opt/intellij-idea/bin/idea.png
+  Terminal=false
+  Type=Application
+  Categories=Desenvolvimento;IDE;
+  StartupWMClass=jetbrains-idea
  ```
 
-   7- Salve e feche o editor
+   7- Salve e feche o editor<br>
    8 - Atualize o banco de dados da área de trabalho para registrar a nova entrada
 ```bash
 sudo update-desktop-database
