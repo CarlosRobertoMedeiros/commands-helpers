@@ -1,8 +1,9 @@
-COMANDOS GIT
+# COMANDOS GIT
 
-/*******************************************************************************************************************************************************************************/
-DESCRICOES DIVERSAS
-	NIVEIS DE CONFIGURACAO DO USUARIO GIT (Ordem hierarquica Local, Global, System)
+
+## DESCRICOES DIVERSAS
+	
+    NIVEIS DE CONFIGURACAO DO USUARIO GIT (Ordem hierarquica Local, Global, System)
 		- SISTEMA(--system)									= Afeta todos os usuários e repositorios da maquina(/etc/gitconfig)
 		- GLOBAL(--global)									= Afeta todos os repositórios para o usuario atual(.gitconfig) de cada usuario
 		- LOCAL (--local)									= Afeta somente o repo git onde a configuracao e feita(.git/config)
@@ -13,8 +14,7 @@ DESCRICOES DIVERSAS
 			 Local Repository / (git push origin <branch>) 
 			 Remote Repository
 	
-/*******************************************************************************************************************************************************************************/	
-CONFIGURACOES DIVERSAS
+## CONFIGURACOES DIVERSAS
 	git config --list										= Lista todas as configurações disponíveis no seu git, mostrando as cofigs(Local, Global e System)
 	git config --system --edit								= Edita valores do arquivo de configuracao do sistema
 
@@ -27,8 +27,7 @@ CONFIGURACOES DIVERSAS
 	Criação de alias no arquio .gitconfig do usuario		= Exemplo [alias] commit = !git add --all & git commit -m
 	Exemplo de alias para log								= llog = !git log --pretty=format:'%C(yellow)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
 	
-/*******************************************************************************************************************************************************************************/
-COMANDOS GERAIS 
+## COMANDOS GERAIS
 	git version												= Verifica se o Git está instalado
 	git config --global user.name <Nome>					= Configura para todos os repositórios criados localmente os dados do nome do usuário
 	git config --global user.email <Email>					= Configura para todos os repositórios criados localmente os dados do email do usuário
@@ -36,8 +35,7 @@ COMANDOS GERAIS
 	git config user.name <Nome>								= Configura para o repositório específico localmente os dados do nome do usuário
 	git config user.email <Email>							= Configura para o repositório específico localmente os dados do email do usuário
 
-/*******************************************************************************************************************************************************************************/
-COMANDO LOCAIS
+## COMANDOS LOCAIS
 	git init    											= Cria um repositório local vazio em um diretório no seu computador
 	
 	git add     									    	= Adiciona o arquivo na stage área do repositório local
@@ -124,8 +122,7 @@ COMANDO LOCAIS
 	git tag -d "v1.0.0"										= Remove a Tag Localmente
 	git push --delete origin tag -d "v1.0.0"				= Remove a Tag Remotamente
 	
-/*******************************************************************************************************************************************************************************/  
-COMANDO REMOTOS
+## COMANDOS REMOTOS
 	git remote add origin <url>     						= Adiciona url do repositorio Remoto no diretorio local
 	git remote -v 											= Lista a Url do repositorio Remoto
 	git clone <remote-repo>									= Clona o repositório remoto
@@ -149,29 +146,22 @@ COMANDO REMOTOS
 
     git merge <branch_com_a_mudanca>                    	= A partir da branch local, realiza uma mesclagem enviando os dados da branch com mudança para a que não tem
 
-/*******************************************************************************************************************************************************************************/
-
-/*---------------------------
-   Utilizando o GIT FLOW
----------------------------*/
-Cria a feature branch a partir da developer
-	git checkout -b feat/<feature-name>
-
-Realiza o merge da feat/<feature-name> na developer (Olhar depois casos de PR)
+## GIT FLOW EXEMPLO DE UTILIZAÇÃO
+    git checkout -b feat/<feature-name>                     = Cria a feature branch a partir da developer
+    
 	git checkout developer
-	git merge feat/<feature-name>
+	git merge feat/<feature-name>                           = Realiza o merge da feat/<feature-name> na developer (Olhar depois casos de PR)
 
-Cria a release a partir da developer
-	git checkout developer
+	git checkout developer                                  = Cria a release a partir da developer  
 	git checkout -b release/1.0.0
 	git push origin release/1.0.0
 
-Cria a Tag
+  
 	git tag -a v1.0.0 -m "feat: Func Implementadas"
-	git push origin v1.0.0 
+	git push origin v1.0.0                                  = Cria a Tag
 
-Release o Merge da Tag na Main
+  
 	git checkout main
-	git merge release/1.0.0
+	git merge release/1.0.0                                 = Realiza o Merge da Tag na Main
 	
-Não esquecer do arquivo de ChangeLog
+  ## OLHAR FUTURAMENTE O CHANGELOG
