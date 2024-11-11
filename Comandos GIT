@@ -62,6 +62,7 @@ COMANDO LOCAIS
 
 	git branch  											= Visualizar todas as branches
 	git branch -d <nome> 									= Exclui uma branch local
+	git push origin --delete <remote-branch>				= Exclui uma branch remota no repositorio
 
 	git checkout <branch_name>								= Navega entre as Branches
 	git checkout -b <branch_name>							= Cria uma nova branch (feature/release/fix) a partir da Branch que está
