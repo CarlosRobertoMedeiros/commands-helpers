@@ -54,8 +54,8 @@
 	git commit -m "refactor: share logic between XX"		= Salva as alterações no repositório local
 	git commit -m "style: convert tabs to spaces"			= Salva as alterações no repositório local
 	git commit -m "test: ensure Lay retains clothing"		= Salva as alterações no repositório local
-	git commit -ammend "test: ensure Lay retains clothing"		= Substitui localmente o ultimo commit, permitindo a edição da mensagem em caso de erro
-	git commit -ammend --no-edit					= Substitui localmente o ultimo commit, sem permitir a edição da última mensagem
+	git commit --amend -m "test: ensure Lay retains clothing"		= Substitui localmente o ultimo commit, permitindo a edição da mensagem em caso de erro
+	git commit --amend --no-edit					= Substitui localmente o ultimo commit, sem permitir a edição da última mensagem
 
 	git log								= Mostra o Log Comparando o repositório local com o repositório remoto
 	git log --oneline --decorate --all--graph			= Mostra o Log Comparando o repositório local com o repositório remoto em visão de árvore
