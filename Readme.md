@@ -5,7 +5,7 @@
 
 Repository containing a generic list of commands to use in several cases
 
-See **[ChangeLog](#-implanta%C3%A7%C3%A3o)** to see the command helpers evolution list .
+See [ChangeLog](https://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Changelog.md) to see the command helpers evolution list .
 
 ### 📋 Requirements
 
