@@ -80,6 +80,7 @@
 	git rm								= Apaga arquivos já trackeados pelo git localmente e ao realizar o push exclui no repo remoto, criando uma nova linha no flow
 	git rm <diretorio> -f						= Apaga o diretorio com todos os arquivos já trackeados pelo git localmente e ao realizar o push exclui no repo remoto, criando uma nova linha no flow
 	git rm <file-name> --cached					= O arquivo vai passar a não ser mais traqueado(o <file> foi incluido no .gitIgnore)
+	git rm -r --cached <diretorio> 				= Apaga o diretorio com todos os arquivos apenas no repositorio remoto
 	
 	git diff origin <remote-repo>					= Demonstra a diferença entre o repositório local e o repositório remoto
 	
