@@ -75,7 +75,7 @@ git log --oneline --decorate --all--graph   # Mostra o Log Comparando o reposito
 git branch  # Visualizar todas as branches no repositorio local
 git branch -a   # Visualizar todas as branches no repositorio local e no repositorio remoto
 git branch -d <nome>    # Exclui uma branch no repositorio local
-git push origin --delete <remote-branch>    # Exclui uma branch no repositorio remoto
+git push origin --delete <remote-branch>    # Sample feat/xxxx Exclui uma branch no repositorio remoto
 
 git checkout <branch_name>  # Navega entre as Branches
 git checkout -b <branch_name>   # Cria uma nova branch (feature/release/fix) a partir da Branch que esta
