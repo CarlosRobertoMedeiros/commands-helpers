@@ -96,6 +96,11 @@ git rm <file-name> --cached # O arquivo vai passar a nao ser mais gerenciado pel
 git rm -r --cached <diretorio>  # O diretorio vai passar a nao ser mais gerenciado pelo git (o <diretorio> foi incluido no .gitIgnore) apagando do repositorio remoto
 
 git diff origin <remote-repo>   # Demonstra a diferenca entre os arquivos do repositorio local e o repositorio remoto
+
+git restore . # Restaura todos os arquivos que se encontram na workspace ao estado inicial antes de qualquer alteracaoo no o (.) indica o ctrl+z no diretorio atual
+git restore --staged <filename> # Restaura todos os arquivos que se encontram na stage ao estado da workspace
+
+git blame <filename> # Mostra a sequencia de quem realizou as ultimas alteracoes no arquivo
 ```	
 
 ### Tipos de Merge
@@ -139,7 +144,7 @@ git reflog  # Mostra todas as alteracoes no projeto
 ```bash
 git stash clear     # Limpar o stash 
 git stash save      # Criar uma entrada no stash cotendo os arquivos
-git stash push -m "Mensagem" #Cria uma entrada no stash com uma mensagem personalizada
+git stash push -m "Mensagem" # Cria uma entrada no stash com uma mensagem personalizada
 git stash apply* Olhar o pop    # Traz de volta os arquivos
 git stash apply stash@{1}       # Traz de volta os arquivos da referencia daquele stash
 git stash list      # Lista os arquivos no Stash 
@@ -156,8 +161,10 @@ git tag     # Mostra todas as tags
 git show v1.0.0     # Mostra detalhes da tag
 git tag -a "0.1.beta" -m "release 0.1.beta" <hash-commit>	# Cria o rotulo para a versao 0.1 realizada no commit <hash-commit>
 git push origin v1.0.0  # Envia a tag local para o repositorio remoto
+git push origin --tags # Envia todas as tags do repo local para o repo remoto
 git tag -d "v1.0.0"     # Remove a Tag Localmente
 git push --delete origin tag -d "v1.0.0"    # Remove a Tag Remotamente
+git tag -v v1.0.0 # Mostra as informacoes dessa tag especificamente somente para tags anotadas
 ```
 	
 ## COMANDOS REMOTOS
