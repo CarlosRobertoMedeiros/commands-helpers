@@ -139,6 +139,7 @@ git reflog  # Mostra todas as alteracoes no projeto
 ```bash
 git stash clear     # Limpar o stash 
 git stash save      # Criar uma entrada no stash cotendo os arquivos
+git stash push -m "Mensagem" #Cria uma entrada no stash com uma mensagem personalizada
 git stash apply* Olhar o pop    # Traz de volta os arquivos
 git stash apply stash@{1}       # Traz de volta os arquivos da referencia daquele stash
 git stash list      # Lista os arquivos no Stash 
