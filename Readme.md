@@ -5,31 +5,27 @@
 
 Repository containing a generic list of commands to use in several cases
 
-See [ChangeLog](https://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Changelog.md) to see the command helpers evolution list .
-
 ### 📋 Requirements
 
-- Docker and Docker-Compose Instalation
+- Linux
+- Docker and Docker-Compose
 - Git Instalation
+- Visual Studio Code
+- Regex
+
 
 ## 📌 Semantic Version Control
 
-We are using [SemVer](http://semver.org/) for version control. 
 
-### 🔧 Links
-  - Semantic Version
-  - Link: https://semver.org/
-  - Semantic Commit
-  - Link: https://www.conventionalcommits.org/en/v1.0.0/
-  - Keep ChangeLog
-  - Link: https://keepachangelog.com/en/1.1.0/
-  
 
 | Subject                | Link                                                                                                           |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------- |
-| 01-Linux-mint-software-instalation        | [Software Instalation](https://github.com/CarlosRobertoMedeiros/commands-helpers/tree/main/linux-mint/software/instalation)   |
-| 02-Docker-commands       | [Docker-Commands](https://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Comandos-Docker.md?plain=1)             |
-| 03-Git-commands       | [Git-Commands](https://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Comandos-GIT.md)             |
+| 01-Linux-commands | [Linux-Commands](https://github.com/CarlosRobertoMedeiros/commands-helpers/tree/main/linux-mint/software/instalation)   |
+| 02-Linux-mint-software-instalation | [Software Instalation](https://github.com/CarlosRobertoMedeiros/commands-helpers/tree/main/linux-mint/software/instalation)   |
+| 03-Docker-commands | [Docker-Commands](https://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Comandos-Docker.md?plain=1)             |
+| 04-Git-commands    | [Git-Commands](https://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Comandos-GIT.md)             |
+| 05-Visual Studio Code-commands       | [VSCode-Commands](https://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Comandos-GIT.md)             |
+| 06-Regex-commands  | [Regex-Commands](https://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Comandos-GIT.md)             |
 
 
 ## ✒️ Author
