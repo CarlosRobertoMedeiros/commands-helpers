@@ -26,6 +26,7 @@ Repository containing a generic list of commands to use in several cases
 | 04-Git-commands    | [Git-Commands](https://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Comandos-GIT.md)             |
 | 05-Visual Studio Code-commands       | [VSCode-Commands](https://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Comandos-VsCode.md)             |
 | 06-Regex-commands  | [Regex-Commands](hhttps://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Comandos-Regex.md)             |
+| 07-LocalStack-commands  | [LocalStack-Commands](hhttps://github.com/CarlosRobertoMedeiros/commands-helpers/blob/main/Comandos-LocalStack.md)             |
 
 
 ## ✒️ Author
