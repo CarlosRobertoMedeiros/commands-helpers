@@ -1,107 +1,133 @@
-# COMANDOS Para Serem Usados no Terminal Linux📣
+# 🐧 Comandos Essenciais para o Terminal Linux
 
-## COMANDOS VI - Editor Linux e Nano📣
-	
-**NIVEIS DE CONFIGURACAO DO USUARIO GIT** (Ordem hierarquica Local, Global, System):
-- **SISTEMA(--system)** : Afeta todos os usuarios e repositorios da maquina(/etc/gitconfig).
-- **GLOBAL(--global)** : Afeta todos os repositorios para o usuario atual(.gitconfig) de cada usuario.
-- **LOCAL (--local)** :	Afeta somente o repo git onde a configuracao e feita(.git/config).
-	
-	
-**Comandos do Vi Agrupados por Categoria**:
-1. Navegacao. 
-2. Insercao de Texto.
-3. Edicao de Texto. 
-4. Pesquisa e Substituicao.
-5. Salvar e Sair
-6. Modos Visuais
+Este guia apresenta comandos úteis para o terminal Linux, incluindo o uso dos editores **Vi/Vim** e **Nano**, manipulação de arquivos, compressão, scripts e variáveis de ambiente.
 
+---
 
-## Comandos para Navegacao
+## 📝 Editores de Texto no Linux: Vi/Vim e Nano
 
-Comando	Descrição	Exemplo de Uso
-h	Move o cursor para a esquerda	Pressione h várias vezes para mover o cursor para trás.
-l	Move o cursor para a direita	Pressione l várias vezes para mover o cursor para frente.
-j	Move o cursor para baixo	Pressione j para descer uma linha.
-k	Move o cursor para cima	Pressione k para subir uma linha.
-0	Move para o início da linha	Em qualquer posição, pressione 0 para ir ao início da linha.
-^	Move para o primeiro caractere não vazio da linha	Pressione ^ para ignorar espaços em branco e ir ao primeiro caractere.
-$	Move para o final da linha	Pressione $ para ir ao final da linha.
-gg	Move para o início do arquivo	Digite gg para ir à primeira linha.
-G	Move para o final do arquivo	Digite G para ir à última linha do arquivo.
-Ctrl + d	Rola metade da tela para baixo	Use Ctrl + d para avançar rapidamente.
-Ctrl + u	Rola metade da tela para cima	Use Ctrl + u para retroceder rapidamente.
+### 🧭 Comandos do Vi Agrupados por Categoria
+1. **Navegação**  
+2. **Inserção de Texto**  
+3. **Edição de Texto**  
+4. **Pesquisa e Substituição**  
+5. **Salvar e Sair**  
+6. **Modos Visuais**
 
+---
 
+## 🔍 Comandos de Navegação no Vi/Vim
 
-	
-## UTILIZACAO DO VI CONFIGURACOES MODO INSERCAO
+| Comando | Descrição | Exemplo de Uso |
+|----------|------------|----------------|
+| `h` | Move o cursor para a esquerda | Pressione `h` várias vezes para mover o cursor para trás. |
+| `l` | Move o cursor para a direita | Pressione `l` várias vezes para mover o cursor para frente. |
+| `j` | Move o cursor para baixo | Pressione `j` para descer uma linha. |
+| `k` | Move o cursor para cima | Pressione `k` para subir uma linha. |
+| `0` | Vai para o início da linha | Pressione `0` para ir ao início da linha. |
+| `^` | Vai ao primeiro caractere não vazio da linha | Pressione `^` para ignorar espaços e ir ao primeiro caractere. |
+| `$` | Vai para o final da linha | Pressione `$` para ir ao final da linha. |
+| `gg` | Vai para o início do arquivo | Digite `gg` para ir à primeira linha. |
+| `G` | Vai para o final do arquivo | Digite `G` para ir à última linha. |
+| `Ctrl + d` | Rola metade da tela para baixo | Use para avançar rapidamente. |
+| `Ctrl + u` | Rola metade da tela para cima | Use para retroceder rapidamente. |
+
+---
+
+## ✍️ Uso do Vi – Modo Inserção
+
 ```bash
-vi # Comando utilizado para acessar o editor
-digitar i # Dentro do editor de texto a letra i coloca o editor de texto em modo de insercao para escrever o que for necessario
-tecla esc # Sai do modo edicao
-digita :w <filename> # Salva o texto que foi inserido no editor exemplo :w arquivo.txt
-digita :q # Sai do editor 
-digita :q! # Sai do editor sem salvar
-vi <filename> # Abre o editor com o arquivo indicado ex: vi arquivo.txt
-digita A # No texto ao posicionar em uma linha essa letra move para o ultimo caractere da linha
+vi                  # Abre o editor Vi
+i                   # Entra no modo de inserção para digitar texto
+Esc                 # Sai do modo de inserção
+:w <arquivo>        # Salva o texto inserido (exemplo: :w arquivo.txt)
+:q                  # Sai do editor
+:q!                 # Sai sem salvar
+vi <arquivo>        # Abre um arquivo específico
+A                   # Move o cursor para o final da linha para inserir texto
+yy                  # Copia a linha atual
+o                   # Cria uma nova linha abaixo
+p                   # Cola a linha copiada
+dd                  # Recorta (deleta) a linha atual
 
-pressiona yy # Copia a linha do cursor que esta piscando
-pressiona o # Cria uma nova linha
-pressiona p # Cola a linha que foi copiada
-
-pressiona dd # Recorta a linha do cursor que esta piscando
-
-Esc :/Windows # Pesquisa dentro do arquivo a palavra Windows e posiciona o cursor na primeira ocorrencia
-Esc :s/Windows/Unix/ # Substitui todas as ocorrencias dentro do arquivo da palavra Windows por Unix
-Esc :s/Cachorro/Cao/g :x # Substitui todas as ocorrencias dentro do arquivo da palavra Cachorro por Cao de maneira global em seguida salva  e sai
-
+:/Windows           # Pesquisa a palavra "Windows"
+:s/Windows/Unix/    # Substitui a primeira ocorrência de "Windows" por "Unix"
+:s/Cachorro/Cao/g   # Substitui todas as ocorrências de "Cachorro" por "Cão" (global)
+:x                  # Salva e sai do editor
 ```
 
-## CONFIGURACOES MODO NAO INSERCAO
-```bash
-wc <filename> # Exibe algumas estatisticas do arquivo Ex: 13 32 230  = 13 linhas, 32 palavras, 230 caracteres 
-uniq <filename> # Exibe o conteudo do arquivo removendo as duplicidades dentro das linhas
-uniq -D <filename> # Exibe o conteudo do arquivo que e duplicado
-uniq -c <filename> # Exibe o conteudo do arquivo e cria um contador dizendo quantas vezes cada linha foi encontrada
-unique --help # Qualquer comando podemos usar o help para listar tudo
+---
 
-sort <filename> # Ordena pra mim em ordem alfabetica o conteudo do arquivo
-head -c 200 <filename> # Lista os 200 primeiros caracteres para o filename
-tail -n 2 <filename> # Mostras as ultimas 2 linhas do arquivo
-tail -c 100 <filename> # Mostras os ultimos 100 caracteres do arquivo 
+## ⚙️ Comandos Úteis Fora do Modo de Inserção
+
+```bash
+wc <arquivo>          # Mostra estatísticas: linhas, palavras e caracteres
+uniq <arquivo>        # Remove duplicidades no conteúdo
+uniq -D <arquivo>     # Exibe apenas as linhas duplicadas
+uniq -c <arquivo>     # Conta o número de ocorrências de cada linha
+uniq --help           # Exibe ajuda sobre o comando uniq
+
+sort <arquivo>        # Ordena o conteúdo em ordem alfabética
+head -c 200 <arquivo> # Exibe os 200 primeiros caracteres
+tail -n 2 <arquivo>   # Exibe as 2 últimas linhas
+tail -c 100 <arquivo> # Exibe os 100 últimos caracteres
 ```
 
-## COMPACTACAO DE ARQUIVOS
+---
+
+## 📦 Compactação e Descompactação de Arquivos
+
+### ZIP
 ```bash
-zip -r directory.zip directory # Compacta com zip o diretorio com todos os arquivos(r - recursive) e coloca em um arquivo chamado diretory.zip
-less directory.zip # Permite verificar detalhes do do directory.zip
-unzip directory.zip # Descompacta os arquivos dentro do diretorio atual
-unzip -q directory.zip # Descompacta os arquivos dentro do diretorio atual sem mostrar nada no prompt
-
-
-tar -czf directory directory.tar.gz # Compacta com o tar o diretorio com todos os arquivos e voloca em um arquivo chamado direcoty.tar.gz Create Zip File(czf)
-less directory.tar.gz # Permite verificar detalhes do directory.tar.gz
-tar -xzf directory.tar.gz # Descompacta os arquivos dentro do diretorio atual Extract Zip File(xzf)
-tar -xzf relatorio.tar.gz && ls # Descompacta o arquivo e lista os arquivos no diretorio atual
+zip -r diretorio.zip diretorio  # Compacta um diretório completo (recursivo)
+less diretorio.zip              # Exibe informações do arquivo compactado
+unzip diretorio.zip             # Descompacta o conteúdo
+unzip -q diretorio.zip          # Descompacta em modo silencioso
 ```
 
-## ESCREVENDO UM SCRIPT AUTOMATIZACAO DE TAREFAS
+### TAR/GZ
 ```bash
-touch filename.sh     # Criar um Script o nome deve ser 
-chmod +x filename.sh  # Dar a permissao de Execucao para os U/G/Others
-./filename.sh         # Executar o que o arquivo script faz
-bash filename.sh      # Executar o que o arquivo script faz mesma coisa do ./filename.sh
+tar -czf diretorio.tar.gz diretorio  # Compacta o diretório em formato .tar.gz
+less diretorio.tar.gz                # Visualiza informações do arquivo compactado
+tar -xzf diretorio.tar.gz            # Descompacta o conteúdo
+tar -xzf relatorio.tar.gz && ls      # Descompacta e lista os arquivos
 ```
 
-## VARIAVEIS DE AMBIENTE NO Linux
+---
+
+## ⚡ Automação com Scripts
+
 ```bash
-echo $PATH  # Lista todos os arquivos que estao na variavel de ambiente
-export PATH=$PATH:/home/roberto # Adiciono ao Path do Linux uma variavel que aponta para home/roberto
+touch script.sh       # Cria um novo script
+chmod +x script.sh    # Concede permissão de execução
+./script.sh           # Executa o script
+bash script.sh        # Outra forma de executar o script
 ```
 
-## INSTALACAO DE AMBIENTES
+---
+
+## 🌱 Variáveis de Ambiente
+
 ```bash
-sudo apt install mysql-server # Instala o mysql-server no seu linux
-systemctl status mysql # Verifica status do servico
+echo $PATH                         # Exibe os diretórios do PATH
+export PATH=$PATH:/home/roberto    # Adiciona um novo caminho ao PATH
 ```
+
+---
+
+## 🛠️ Instalação de Ambientes e Serviços
+
+```bash
+sudo apt install mysql-server  # Instala o MySQL Server
+systemctl status mysql         # Verifica o status do serviço MySQL
+```
+
+---
+
+📚 **Dica:**  
+Use o comando `man <comando>` (ex: `man tar`) para acessar o manual completo de cada utilitário Linux diretamente no terminal.
+
+---
+
+🧑‍💻 _Autor: Carlos Roberto_  
+📅 _Atualizado em: Novembro de 2025_
