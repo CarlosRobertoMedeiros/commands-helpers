@@ -28,5 +28,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added linux-mint/software/instalation with vscode
 - Added linux-mint/software/instalation with java
 - Added docker-commands
-- Added git-commands
+- Added git-commands 
 
